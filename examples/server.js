@@ -22,7 +22,7 @@ var share = sharejs.server.createClient({backend: backend});
 
 var clientsById = {};
 
-webserver.use(browserChannel({webserver: webserver, sessionTimeoutInterval: 5000}, function (client) {
+webserver.use(browserChannel({cors: "*", webserver: webserver, sessionTimeoutInterval: 5000}, function (client) {
   clientsById[client.id] = client;
   //client.send({_type: 'connectionId', connectionId: client.id});
 
