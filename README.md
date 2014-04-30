@@ -41,6 +41,10 @@ In the HTML:
 
 ```
 npm install
+pushd node_modules/share
+  npm install
+  make
+popd
 node examples/server.js
 # in a couple of browsers...
 open http://localhost:7007
